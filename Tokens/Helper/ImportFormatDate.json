@@ -1,0 +1,24 @@
+{
+  "id": 32,
+  "globalId": "dabbc11c-a1b8-462f-902d-c5b8d97ca665",
+  "namespace": {
+    "id": 9,
+    "globalId": "e7c3ddf9-6ddf-44ec-bf6d-f8ffa22769b4",
+    "portalId": 0,
+    "name": "Helper",
+    "isSystem": false
+  },
+  "name": "ImportFormatDate",
+  "description": "",
+  "parser": "<parser><type>string</type><replace>false</replace><decodeHtml>false</decodeHtml></parser>",
+  "defaultValue": "",
+  "cacheTime": 0,
+  "cacheLayer": "Global",
+  "src": {
+    "sql": "Select CONVERT(VARCHAR(32), '[tknparams:Date]', 127)+'Z' as FormatDate",
+    "defaultColumn": "FormatDate",
+    "columns": "FormatDate",
+    "connectionString": "",
+    "type": "db"
+  }
+}

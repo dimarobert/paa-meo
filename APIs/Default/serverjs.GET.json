@@ -1,0 +1,89 @@
+{
+  "Name": "serverjs",
+  "HttpMethod": "GET",
+  "IsEnabled": true,
+  "OrderIndex": 0,
+  "CrossDomainPolicy": "Public",
+  "Input": [
+    {
+      "Name": "NewField",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {
+        "Value": ""
+      },
+      "InputTypeStr": "text",
+      "Validations": []
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "LoadEntitiesFromJson",
+      "OrderIndex": 0,
+      "Parameters": {
+        "JsonModel": "[newfield]",
+        "EntityName": "list",
+        "OnError": [],
+        "EnforceISODateTime": true
+      },
+      "Output": {},
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    },
+    {
+      "ActionType": "ExecuteActionsOnEntityList",
+      "OrderIndex": 1,
+      "Parameters": {
+        "EntityName": "list",
+        "Filters": "",
+        "ContextBehavior": {
+          "Expression": "",
+          "Value": "",
+          "IsExpression": false,
+          "Parameters": {}
+        },
+        "ActionList": [
+          {
+            "Id": -1,
+            "$_uid": "action16687855194608290",
+            "EventName": "click",
+            "Parameters": {
+              "ConnectionString": "",
+              "n": "x",
+              "d": "[Helper:ImportFormatDate(Date=\"[list:date]\")]",
+              "OutputToken": "z",
+              "OnError": []
+            },
+            "ActionType": "PlantAnApp.CreateEntity.ad1094c4-5fb9-4584-b1be-8fb80e1e7160",
+            "$_isOpen": false,
+            "$_isLoaded": true,
+            "$_isFocus": true
+          },
+          {
+            "Id": -1,
+            "$_uid": "action16687855194606627",
+            "EventName": "click",
+            "Parameters": {
+              "Content": "[z]",
+              "HttpCode": "200 Ok",
+              "Headers": ""
+            },
+            "ActionType": "RawResponse",
+            "$_isOpen": false,
+            "$_isLoaded": true,
+            "$_isFocus": true
+          }
+        ],
+        "ContinueOnError": "",
+        "OnError": []
+      },
+      "Output": {},
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {}
+    }
+  ],
+  "OnErrorActions": []
+}
