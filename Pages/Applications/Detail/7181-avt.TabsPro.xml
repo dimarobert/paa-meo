@@ -177,6 +177,12 @@
           &lt;ModuleOrder&gt;1&lt;/ModuleOrder&gt;
           &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
         &lt;/Module&gt;
+        &lt;Module&gt;
+          &lt;ModuleId&gt;7180&lt;/ModuleId&gt;
+          &lt;ModuleTitle&gt;Details Form&lt;/ModuleTitle&gt;
+          &lt;ModuleOrder&gt;1&lt;/ModuleOrder&gt;
+          &lt;DisplayTitle&gt;False&lt;/DisplayTitle&gt;
+        &lt;/Module&gt;
       &lt;/Modules&gt;
     &lt;/Tab&gt;
   &lt;/Tabs&gt;
