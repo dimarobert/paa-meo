@@ -1,0 +1,91 @@
+{
+  "Name": "x",
+  "Description": "Creates a new record of type x",
+  "HttpMethod": "POST",
+  "IsEnabled": true,
+  "OrderIndex": 1,
+  "CrossDomainPolicy": "PortalAliasesOnly",
+  "Input": [
+    {
+      "Name": "name",
+      "IsDeleted": false,
+      "IsEnabled": true,
+      "OrderIndex": 0,
+      "Parameters": {},
+      "InputTypeStr": "text",
+      "Validations": [
+        {
+          "Data": "{\"Message\":\"name is required.\"}",
+          "Type": "default-required",
+          "IsDeleted": false,
+          "IsEnabled": false,
+          "OrderIndex": 0,
+          "Metadata": {
+            "PAP_InternalIdentifier": "Api.InputField.RequiredValidator"
+          }
+        }
+      ]
+    }
+  ],
+  "Actions": [
+    {
+      "ActionType": "PlantAnApp.CreateEntity.6be69df3-c0c0-4451-8607-1171995648bb",
+      "OrderIndex": 0,
+      "Parameters": {
+        "OutputToken": "CreatedRecordId",
+        "name": "[name]"
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.CreateEntity",
+        "EntityIdentifier": "6be69df3-c0c0-4451-8607-1171995648bb",
+        "IsUidEnabled": "True"
+      }
+    },
+    {
+      "ActionType": "PlantAnApp.ReadEntity.6be69df3-c0c0-4451-8607-1171995648bb",
+      "OrderIndex": 1,
+      "Parameters": {
+        "RecordId": "[CreatedRecordId]",
+        "OutputToken": "CreatedRecord"
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.ReadEntity",
+        "EntityIdentifier": "6be69df3-c0c0-4451-8607-1171995648bb",
+        "IsUidEnabled": "True"
+      }
+    },
+    {
+      "ActionType": "JsonObject",
+      "OrderIndex": 2,
+      "Parameters": {
+        "HttpCode": "201 Created",
+        "Fields": [
+          {
+            "name": "Id",
+            "value": "[CreatedRecordId]"
+          },
+          {
+            "name": "name",
+            "value": "[CreatedRecord:name]"
+          }
+        ],
+        "Headers": [
+          {
+            "name": "Location",
+            "value": "http://localhost:25990/api/x?recordId=[CreatedRecordId]"
+          }
+        ]
+      },
+      "IsDisabled": false,
+      "ExecutionType": "OnExecute",
+      "Metadata": {
+        "PAP_InternalIdentifier": "Api.Response"
+      }
+    }
+  ],
+  "OnErrorActions": []
+}

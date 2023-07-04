@@ -1,0 +1,142 @@
+{
+  "InputFields": [],
+  "OutputFields": [],
+  "Id": 3,
+  "GlobalId": "b0d45d27-02df-4f0a-9034-a3e6bd262161",
+  "ConfigGenerationGlobalId": "b0d45d27-02df-4f0a-9034-a3e6bd262161",
+  "EnvironmentId": 1,
+  "Name": "New Workflow2",
+  "Description": "",
+  "IsDebug": false,
+  "ActionList": {
+    "Id": 9,
+    "EventName": "Event",
+    "Actions": [
+      {
+        "Id": 9,
+        "Description": "",
+        "ActionErrorMessage": "",
+        "Condition": "",
+        "ActionType": "PlantAnApp.ExecuteConditionally",
+        "OrderIndex": 0,
+        "ActionParameters": [
+          {
+            "Id": 27,
+            "Name": "ConditionedActions",
+            "Value": [
+              {
+                "Condition": {
+                  "IsExpression": false,
+                  "Expression": "",
+                  "Value": "true"
+                },
+                "Actions": {
+                  "Id": 10,
+                  "EventName": "click",
+                  "Actions": [
+                    {
+                      "Id": 10,
+                      "Description": null,
+                      "ActionErrorMessage": null,
+                      "Condition": null,
+                      "ActionType": "ApplyTokens",
+                      "OrderIndex": 0,
+                      "ActionParameters": [
+                        {
+                          "Id": 29,
+                          "Name": "Tokens",
+                          "Value": [
+                            {
+                              "value": "b",
+                              "name": "a"
+                            }
+                          ],
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 10,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 30,
+                          "Name": "RecursionCount",
+                          "Value": "1",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 10,
+                          "OrderIndex": 0
+                        }
+                      ],
+                      "DiagramUID": "Activity_13db9ou"
+                    }
+                  ],
+                  "IsInvalid": false
+                }
+              },
+              {
+                "Condition": {
+                  "IsExpression": false,
+                  "Expression": "",
+                  "Value": "false"
+                },
+                "Actions": {
+                  "Id": 11,
+                  "EventName": "click",
+                  "Actions": [
+                    {
+                      "Id": 11,
+                      "Description": null,
+                      "ActionErrorMessage": null,
+                      "Condition": null,
+                      "ActionType": "ApplyTokens",
+                      "OrderIndex": 0,
+                      "ActionParameters": [
+                        {
+                          "Id": 33,
+                          "Name": "Tokens",
+                          "Value": [
+                            {
+                              "value": "c",
+                              "name": "a"
+                            }
+                          ],
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 11,
+                          "OrderIndex": 0
+                        },
+                        {
+                          "Id": 34,
+                          "Name": "RecursionCount",
+                          "Value": "1",
+                          "ParentParameterId": null,
+                          "IsExpression": false,
+                          "ActionId": 11,
+                          "OrderIndex": 0
+                        }
+                      ],
+                      "DiagramUID": "Activity_1wajqr0"
+                    }
+                  ],
+                  "IsInvalid": false
+                }
+              }
+            ],
+            "ParentParameterId": null,
+            "IsExpression": false,
+            "ActionId": 9,
+            "OrderIndex": 0
+          }
+        ],
+        "DiagramUID": "Gateway_1akncbb"
+      }
+    ],
+    "IsInvalid": false
+  },
+  "CreatedBy": 1,
+  "CreatedOn": "2023-06-29T12:54:33.505645+03:00",
+  "LastModifiedBy": 1,
+  "LastModifiedOn": "2023-06-29T13:13:45.7522872+03:00",
+  "DiagramXML": null,
+  "IsCorrupted": false,
+  "NamespaceUid": "8098259e-211f-491a-b2c3-4f12861210ad"
+}
